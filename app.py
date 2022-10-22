@@ -1,4 +1,5 @@
 import os
+import glob
 
 from models.model import model_predict
 
@@ -12,6 +13,10 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
+    # Remove the image uploaded by user
+    files = glob.glob('uploads/*')
+    for f in files:
+        os.remove(f)
     # Main page
     return render_template('index.html')
 
