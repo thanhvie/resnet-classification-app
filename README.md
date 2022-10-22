@@ -19,3 +19,6 @@ docker run -p 5000:5000 -d <your-image-name>
 ```
 docker-compose up
 ```
+
+## A deployment on heroku
+https://resnet50-vndatasmart.herokuapp.com/
